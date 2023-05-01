@@ -46,14 +46,13 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <div className="container">
+        <div className="transbox">
+           <p className="toDoHeading">To Do List</p>
           <AddTask 
-        //   function as a props pass kiya ha addTask ko
-          onAddTask={this.handleAddTask} />
+          onAddTask={this.handleAddTask} /></div>
           <br />
           <TaskList tasks={this.state.tasks} onDeleteTask={this.handleDeleteTask} />
         </div>
-      </div>
     );
   }
 }

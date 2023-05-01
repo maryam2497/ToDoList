@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './AddTask.css'
 class AddTask extends Component {
   state = {
     taskName: ''
@@ -14,7 +14,6 @@ class AddTask extends Component {
       alert('Empty task name can not be added to the list...');
       return;
     }
-    // onAddTask ka function home se receive kiya hai as props
     this.props.onAddTask(this.state.taskName);
     this.setState({ taskName: '' });
     
@@ -23,12 +22,12 @@ class AddTask extends Component {
   render() {
     return (
       <div>
-        <input
+        <input className='txtInput'
           type="text"
           value={this.state.taskName}
           onChange={this.handleInputChange}
         />
-        <button onClick={this.handleAddTask}>Add Task</button>
+        <button className='btn addButton' onClick={this.handleAddTask}>Add Task</button>
       </div>
     );
   }

@@ -10,7 +10,6 @@ class TaskList extends Component {
         <div>
         {this.props.tasks.map((task, index) => (
           <Task key={index} taskName={task}
-          // passing on delete function as props
           onDeleteTask={this.props.onDeleteTask} />
         ))}
       </div>
