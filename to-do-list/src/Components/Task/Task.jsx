@@ -19,16 +19,17 @@ class Task extends Component {
   render() {
     const { taskName } = this.props;
     return (
-      <div className="task">
+      <div className='transbox2'>
+      <div className='flexbox2'>
         <input
-          type="checkbox"
+          type="checkbox" class="largerCheckbox"
           checked={this.state.isChecked}
           onChange={this.handleCheckboxChange}
         />
-        <label style={{ textDecoration: this.state.isChecked ? 'line-through' : 'none' }}>
+        <label className='taskNamee' style={{ textDecoration: this.state.isChecked ? 'line-through' : 'none' }}>
           {taskName}
-        </label>
-        <button className="delete-button" onClick={this.handleDeleteTask}>Delete</button>
+        </label></div>
+        <button id='border'  className="btn delButton" onClick={this.handleDeleteTask}>Delete</button>
 
       </div>
     );
