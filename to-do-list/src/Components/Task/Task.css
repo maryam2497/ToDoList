@@ -1,0 +1,10 @@
+.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .task-label {
+    margin-left: 10px;
+  }
+  
